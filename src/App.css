@@ -1,0 +1,6 @@
+.App {
+    margin: 50px;
+    border: 1px solid sienna;
+    display: grid;
+    grid-template-areas: 'header header header header header' 'nav lib lib lib lib' 'footer footer footer footer footer';
+}

@@ -1,0 +1,13 @@
+.app-header {
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    background-color: chartreuse;
+    padding: 20px 33px;
+    border-radius: 33px 33px 0 0;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+}
