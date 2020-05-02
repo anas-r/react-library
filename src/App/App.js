@@ -1,10 +1,10 @@
 import React from 'react';
-import './App.css';
-import Library from "./Library/Library";
-import Header from "./Header/Header";
+import Library from "../components/Library/Library";
+import Header from "../components/Header/Header";
+import Navigation from "../components/Navigation/Navigation";
+import Footer from "../components/Footer/Footer";
 import ls from 'local-storage'
-import Navigation from "./Navigation/Navigation";
-import Footer from "./Footer/Footer";
+import './App.css';
 
 
 class App extends React.Component {
