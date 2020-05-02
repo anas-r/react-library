@@ -1,5 +1,7 @@
 import React from "react";
 import './Book.css'
+import * as fa from "@fortawesome/free-solid-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 function book(props) {
     let form;
@@ -29,9 +31,9 @@ function book(props) {
         return (
         <section className={"book " + (props.isRead ? "book-read" : "")}>
             <header className="book-menu">
-                <button onClick={props.edit}>Edit</button>
-                <button onClick={props.read}>Read</button>
-                <button onClick={props.delete}>Delete</button>
+                <button onClick={props.edit}><FontAwesomeIcon icon={!(props.editable) ? fa.faEdit : fa.faSave} /></button>
+                <button onClick={props.read}><FontAwesomeIcon icon={fa.faStar} /></button>
+                <button onClick={props.delete}><FontAwesomeIcon icon={fa.faTrash} /></button>
             </header>
             {form}
         </section>

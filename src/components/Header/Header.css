@@ -2,12 +2,50 @@
     grid-area: header;
     display: flex;
     justify-content: space-between;
-    background-color: chartreuse;
-    padding: 20px 33px;
+    background-color: var(--darker-bg);
+    padding: 15px 25px;
     border-radius: 33px 33px 0 0;
 }
 
 h1 {
-    margin: 0;
+    margin: auto auto auto 15px;
     padding: 0;
+    color: var(--bg);
+    display: flex;
+}
+
+h1 > * {
+    margin: auto;
+}
+
+h1:hover {
+    color: white;
+}
+
+.app-header > button {
+    width: 65px;
+    height: 65px;
+    border-style: none;
+    border-radius: 65px;
+    background-color: var(--bg);
+    cursor: pointer;
+    color: var(--darker-bg);
+    box-shadow: var(--shadow);
+}
+
+.app-header > button * {
+    cursor: pointer;
+}
+
+.app-header > button:hover {
+background-color: white;
+}
+.app-header span {
+    margin-left: 15px;
+}
+
+@media screen and (max-width: 600px) {
+    h1 span {
+        display: none;
+    }
 }

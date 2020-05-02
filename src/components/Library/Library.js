@@ -1,6 +1,8 @@
 import React from "react";
 import Book from "../Book/Book";
 import './Library.css'
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import * as fa from "@fortawesome/free-solid-svg-icons";
 
 class Library extends React.Component {
     constructor(props) {
@@ -25,7 +27,7 @@ class Library extends React.Component {
             ...books[bookIndex],
             isEditable: !books[bookIndex].isEditable
         };
-        event.target.textContent = !(books[bookIndex].isEditable) ? "Save" : "Edit";
+
         books.splice(bookIndex, 1, book);
         this.setState({books: books});
     }
@@ -102,8 +104,8 @@ class Library extends React.Component {
                       description={book.description}
                 />
             )
-        }).concat([                <div className="button-wrapper">
-            <button onClick={this.addBookHandler.bind(this)}>Add new book</button>
+        }).concat([<div className="button-wrapper" key="btn">
+            <button onClick={this.addBookHandler.bind(this)}><FontAwesomeIcon icon={fa.faPlus} size="2x" /></button>
         </div>])
     }
 

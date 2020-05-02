@@ -5,6 +5,7 @@ import Navigation from "../components/Navigation/Navigation";
 import Footer from "../components/Footer/Footer";
 import ls from 'local-storage'
 import './App.css';
+import Signature from "./Signature";
 
 
 class App extends React.Component {
@@ -31,9 +32,10 @@ class App extends React.Component {
         return (
             <div className="App">
                 <Header saved={this.saveLibraryInLocalStorage.bind(this)}/>
-                <Navigation showUnread={this.showUnreadHandler.bind(this)}/>
+                <Navigation showUnread={this.showUnreadHandler.bind(this)} marker={this.state.showUnread}/>
                 <Library save={this.saveLibraryInApp.bind(this)} initialState={{...this.saved}} showUnread={this.state.showUnread}/>
                 <Footer />
+                <Signature />
             </div>
         );
     }

@@ -1,3 +1,12 @@
 footer {
     grid-area: footer;
+    padding: 15px 25px;
+    border-radius: 0 0 18px 18px;
+    background-color: var(--darker-bg);
+    color: var(--bg);
+    font-weight: bold;
+}
+
+footer:hover {
+    color: white;
 }

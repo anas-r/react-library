@@ -1,5 +1,31 @@
+:root {
+    --bg: #E6FFFA;
+    --dark-bg: #B2F5EA;
+    --darker-bg: #4FD1C5;
+    --txt: #234E52;
+
+    --icons-dark: #319795;
+    --icons: #81E6D9;
+
+    --shadow: 0px 10px 31px 0px rgba(0,0,0,0.08);
+}
 
 
 * {
     box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+    transition-property: background-color, box-shadow;
+    cursor: default;
 }
+
+#root {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg);
+    margin: 0;
+    padding: 0;
+}
+

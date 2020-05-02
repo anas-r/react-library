@@ -1,8 +1,15 @@
 .book {
-    margin: 10px;
-    padding: 16px;
-    border: 1px solid black;
     border-radius: 25px;
+    background-color: var(--bg);
+    box-shadow: var(--shadow);
+}
+
+.book:hover {
+    background-color: white;
+}
+
+.book:hover button {
+    background-color: white;
 }
 
 /* MENU */
@@ -10,16 +17,34 @@
 .book-menu {
     display: flex;
     justify-content: flex-end;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
     border-radius: 20px 20px 0 0;
+    background-color: var(--dark-bg);
+    padding: 16px;
 }
 
-.book-read {
-    background-color: sienna;
+.book-read > .book-menu{
+    background-color: var(--darker-bg);
 }
+
+.book-read > .book-menu > button{
+    color: var(--icons-dark);
+}
+
 
 .book-menu > button {
+    width: 35px;
+    height: 35px;
+    border-style: none;
+    border-radius: 35px;
+    background-color: var(--bg);
     margin: 0 10px 0 0;
+    cursor: pointer;
+    color: var(--icons);
+}
+
+.button-menu > button * {
+    cursor: pointer;
 }
 
 .book-menu > button:last-child {
@@ -27,6 +52,12 @@
 }
 
 /* INFO */
+
+.book-info {
+    color: var(--txt);
+    margin: 10px;
+    padding: 8px 16px 16px;
+}
 
 .book-info > input {
     display: block;
@@ -38,6 +69,16 @@
     margin-bottom: 16px;
 }
 
-*[contenteditable="true"] {
-    background-color: chartreuse;
+input {
+    border-style: none;
+    width: 100%;
+    background-color: var(--dark-bg);
+    font-size: 1rem;
+    font-family: "Merriweather Sans",sans-serif;
+    color: var(--txt);
 }
+
+input[disabled] {
+    background-color: transparent;
+}
+

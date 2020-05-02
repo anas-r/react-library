@@ -1,3 +1,24 @@
 .app-navigation {
     grid-area: nav;
+    background-color: var(--dark-bg);
+    color: var(--txt);
+}
+
+.app-navigation > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.app-navigation li {
+    padding: 5px 18px;
+    cursor: pointer;
+}
+
+.app-navigation li:first-child {
+    margin-top: 18px;
+}
+
+.app-navigation-selected {
+    background-color: var(--darker-bg);
 }
